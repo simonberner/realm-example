@@ -13,7 +13,7 @@ class Item: Object, ObjectKeyIdentifiable {
 
     // primary database key of the object
     @Persisted(primaryKey: true) var _id: ObjectId
-    @Persisted var name = "test"
+    @Persisted var name = "\(randomAdjectives.randomElement()!) \(randomNouns.randomElement()!)"
     @Persisted var isFavorite = false
 
     // backlink to the list of items of a group (to know to wich group an item belongs to)

@@ -18,6 +18,8 @@
 		15A5CBFD27E23A220069C883 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 15A5CBFC27E23A220069C883 /* RealmSwift */; };
 		15A5CC0027E2486D0069C883 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5CBFF27E2486D0069C883 /* Item.swift */; };
 		15A5CC0227E2487A0069C883 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5CC0127E2487A0069C883 /* Group.swift */; };
+		15A5CC0527E27E4B0069C883 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5CC0427E27E4B0069C883 /* ItemListView.swift */; };
+		15A5CC0727E27E680069C883 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5CC0627E27E680069C883 /* ItemDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		15A5CBF827E237320069C883 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		15A5CBFF27E2486D0069C883 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		15A5CC0127E2487A0069C883 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		15A5CC0427E27E4B0069C883 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		15A5CC0627E27E680069C883 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +108,9 @@
 		15A5CBCD27E235080069C883 /* RealmExample */ = {
 			isa = PBXGroup;
 			children = (
+				15A5CC0327E27E310069C883 /* Views */,
 				15A5CBFE27E248560069C883 /* Model */,
 				15A5CBCE27E235080069C883 /* RealmExampleApp.swift */,
-				15A5CBD027E235080069C883 /* ContentView.swift */,
 				15A5CBD227E2350B0069C883 /* Assets.xcassets */,
 				15A5CBD427E2350B0069C883 /* Preview Content */,
 			);
@@ -145,6 +149,16 @@
 				15A5CC0127E2487A0069C883 /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		15A5CC0327E27E310069C883 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15A5CBD027E235080069C883 /* ContentView.swift */,
+				15A5CC0427E27E4B0069C883 /* ItemListView.swift */,
+				15A5CC0627E27E680069C883 /* ItemDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A5CC0727E27E680069C883 /* ItemDetailView.swift in Sources */,
+				15A5CC0527E27E4B0069C883 /* ItemListView.swift in Sources */,
 				15A5CBD127E235080069C883 /* ContentView.swift in Sources */,
 				15A5CC0027E2486D0069C883 /* Item.swift in Sources */,
 				15A5CBCF27E235080069C883 /* RealmExampleApp.swift in Sources */,
