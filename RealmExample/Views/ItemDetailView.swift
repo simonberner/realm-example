@@ -10,7 +10,12 @@ import RealmSwift
 
 struct ItemDetailView: View {
 
+    // live realm data object (has always the current data)
     @ObservedRealmObject var item: Item
+
+    // get the default realm object to access the database
+//    @Environment(\.realm) var realm
+//    @Environment(\.realmConfiguration) var realmConfig
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,6 +28,19 @@ struct ItemDetailView: View {
                     Image(systemName: item.isFavorite ? "heart.fill" : "heart")
                 }))
             Button {
+                // .thaw(): return a live mutable reference of this object
+                // .realm: each object knows to which realm database it belongs to
+                if let newItem = item.thaw(), let realm = newItem.realm {
+                    // write transaction
+                    do {
+                        try realm.write {
+                            realm.delete(newItem)
+                         }
+                    } catch {
+                        // TODO: show alert
+                        print(error.localizedDescription)
+                    }
+                }
 
             } label: {
                 Text("delete")

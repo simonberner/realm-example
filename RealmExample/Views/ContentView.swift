@@ -6,11 +6,22 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
+
+    // Fetch all the group instances from the (local) Realm database
+    @ObservedResults(Group.self) var groups
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if let group = groups.first {
+            ItemListView(group: group)
+        } else {
+            ProgressView()
+                .onAppear {
+                    $groups.append(Group())
+                }
+        }
     }
 }
 
