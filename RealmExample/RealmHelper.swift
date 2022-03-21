@@ -36,7 +36,9 @@ final class RealmHelper {
 
         if allItems.count == 0 {
             try? realm.write({
-                realm.add(Item())
+                for _ in 0...9 {
+                    realm.add(Item())
+                }
             })
         }
         return realm

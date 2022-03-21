@@ -54,7 +54,7 @@ struct ItemDetailView: View {
 struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ItemDetailView(item: Item())
+            ItemDetailView(item: Item.previewExample())
         }
     }
 }

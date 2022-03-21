@@ -19,6 +19,19 @@ class Item: Object, ObjectKeyIdentifiable {
     // backlink to the list of items of a group (to know to wich group an item belongs to)
     @Persisted(originProperty: "items") var group: LinkingObjects<Group>
 
+    // a convenience initializer is a supporting initializer for the class
+    // it must call the designated initializer first
+    convenience init(name: String, isFavorite: Bool) {
+        self.init()
+        self.name = name
+        self.isFavorite = isFavorite
+    }
+
+    static func previewExample() -> Item {
+        Item(name: "fluffy preview", isFavorite: true)
+
+    }
+
 }
 
 let randomAdjectives = [
