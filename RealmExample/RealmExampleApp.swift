@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
+
+let app = App(id: "application-0-ezdqk")
 
 @main
-struct RealmExampleApp: App {
+struct RealmExampleApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
 //            NavigationView {

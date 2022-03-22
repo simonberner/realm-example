@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		15456AE027E4DACB00D4E0D0 /* ItemResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15456ADF27E4DACB00D4E0D0 /* ItemResultView.swift */; };
 		15456AE227E4E30800D4E0D0 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15456AE127E4E30800D4E0D0 /* RealmHelper.swift */; };
+		159E738E27E9100F00D87B9F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159E738D27E9100F00D87B9F /* LoginView.swift */; };
+		159E739027E9103700D87B9F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159E738F27E9103700D87B9F /* AuthenticationManager.swift */; };
 		15A5CBCF27E235080069C883 /* RealmExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5CBCE27E235080069C883 /* RealmExampleApp.swift */; };
 		15A5CBD127E235080069C883 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5CBD027E235080069C883 /* ContentView.swift */; };
 		15A5CBD327E2350B0069C883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A5CBD227E2350B0069C883 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		15456ADF27E4DACB00D4E0D0 /* ItemResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemResultView.swift; sourceTree = "<group>"; };
 		15456AE127E4E30800D4E0D0 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		159E738D27E9100F00D87B9F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		159E738F27E9103700D87B9F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		15A5CBCB27E235080069C883 /* RealmExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A5CBCE27E235080069C883 /* RealmExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExampleApp.swift; sourceTree = "<group>"; };
 		15A5CBD027E235080069C883 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		159E738C27E90FE600D87B9F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				159E738D27E9100F00D87B9F /* LoginView.swift */,
+				159E738F27E9103700D87B9F /* AuthenticationManager.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		15A5CBC227E235080069C883 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 		15A5CBCD27E235080069C883 /* RealmExample */ = {
 			isa = PBXGroup;
 			children = (
+				159E738C27E90FE600D87B9F /* Login */,
 				15A5CC0327E27E310069C883 /* Views */,
 				15A5CBFE27E248560069C883 /* Model */,
 				15A5CBCE27E235080069C883 /* RealmExampleApp.swift */,
@@ -159,10 +173,10 @@
 		15A5CC0327E27E310069C883 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				15A5CBD027E235080069C883 /* ContentView.swift */,
 				15A5CC0427E27E4B0069C883 /* ItemListView.swift */,
 				15A5CC0627E27E680069C883 /* ItemDetailView.swift */,
 				15456ADF27E4DACB00D4E0D0 /* ItemResultView.swift */,
+				15A5CBD027E235080069C883 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +321,8 @@
 				15456AE027E4DACB00D4E0D0 /* ItemResultView.swift in Sources */,
 				15A5CC0727E27E680069C883 /* ItemDetailView.swift in Sources */,
 				15A5CC0527E27E4B0069C883 /* ItemListView.swift in Sources */,
+				159E739027E9103700D87B9F /* AuthenticationManager.swift in Sources */,
+				159E738E27E9100F00D87B9F /* LoginView.swift in Sources */,
 				15A5CBD127E235080069C883 /* ContentView.swift in Sources */,
 				15A5CC0027E2486D0069C883 /* Item.swift in Sources */,
 				15456AE227E4E30800D4E0D0 /* RealmHelper.swift in Sources */,
