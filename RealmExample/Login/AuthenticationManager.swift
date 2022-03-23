@@ -21,6 +21,10 @@ import RealmSwift
         email.count > 5 && password.count > 5
     }
 
+    var enableButtons: Bool {
+        !isLoading && authIsEnabled
+    }
+
     func anonymousLogin() {
         isLoading = true
         errorMessage = nil

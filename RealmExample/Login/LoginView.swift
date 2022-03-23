@@ -34,6 +34,7 @@ struct LoginView: View {
                     Text("sign up")
                 }
                 .buttonStyle(.bordered)
+                .disabled(!authManager.authIsEnabled)
 
                 Button {
                     authManager.login()
@@ -41,12 +42,15 @@ struct LoginView: View {
                     Text("log in")
                 }
                 .buttonStyle(.borderedProminent)
-                }
+                .disabled(!authManager.authIsEnabled)
+            }
+            .padding()
 
             Button("log in anonymously") {
                 authManager.anonymousLogin()
             }
-            .padding()
+            .disabled(authManager.isLoading)
+
         }
         .padding()
     }
