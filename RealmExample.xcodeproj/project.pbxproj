@@ -24,6 +24,8 @@
 		15A5CC0227E2487A0069C883 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5CC0127E2487A0069C883 /* Group.swift */; };
 		15A5CC0527E27E4B0069C883 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5CC0427E27E4B0069C883 /* ItemListView.swift */; };
 		15A5CC0727E27E680069C883 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A5CC0627E27E680069C883 /* ItemDetailView.swift */; };
+		15C18A7F27ECBC5900AA8101 /* GroupLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C18A7E27ECBC5900AA8101 /* GroupLoadingView.swift */; };
+		15C18A8127ECBD0B00AA8101 /* RealmOpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C18A8027ECBD0B00AA8101 /* RealmOpeningView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		15A5CC0127E2487A0069C883 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		15A5CC0427E27E4B0069C883 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		15A5CC0627E27E680069C883 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		15C18A7E27ECBC5900AA8101 /* GroupLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupLoadingView.swift; sourceTree = "<group>"; };
+		15C18A8027ECBD0B00AA8101 /* RealmOpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmOpeningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 				15A5CC0627E27E680069C883 /* ItemDetailView.swift */,
 				15456ADF27E4DACB00D4E0D0 /* ItemResultView.swift */,
 				15A5CBD027E235080069C883 /* ContentView.swift */,
+				15C18A7E27ECBC5900AA8101 /* GroupLoadingView.swift */,
+				15C18A8027ECBD0B00AA8101 /* RealmOpeningView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +329,8 @@
 				15A5CC0527E27E4B0069C883 /* ItemListView.swift in Sources */,
 				159E739027E9103700D87B9F /* AuthenticationManager.swift in Sources */,
 				159E738E27E9100F00D87B9F /* LoginView.swift in Sources */,
+				15C18A8127ECBD0B00AA8101 /* RealmOpeningView.swift in Sources */,
+				15C18A7F27ECBC5900AA8101 /* GroupLoadingView.swift in Sources */,
 				15A5CBD127E235080069C883 /* ContentView.swift in Sources */,
 				15A5CC0027E2486D0069C883 /* Item.swift in Sources */,
 				15456AE227E4E30800D4E0D0 /* RealmHelper.swift in Sources */,

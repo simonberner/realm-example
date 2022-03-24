@@ -17,7 +17,7 @@ struct RealmExampleApp: SwiftUI.App {
 //            NavigationView {
 //                ItemResultView()
 //            }
-            ContentView()
+            ContentView(app: app)
         }
     }
 }

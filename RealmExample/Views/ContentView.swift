@@ -10,23 +10,20 @@ import RealmSwift
 
 struct ContentView: View {
 
-    // Fetch all the group instances from the (local) Realm database
-    @ObservedResults(Group.self) var groups
+    @ObservedObject var app: RealmSwift.App
 
     var body: some View {
-        if let group = groups.first {
-            ItemListView(group: group)
+        if let user = app.currentUser {
+            RealmOpeningView()
+                .environment(\.partitionValue, user.id) // see https://www.mongodb.com/docs/realm/sync/data-access-patterns/sync-mode/
         } else {
-            ProgressView()
-                .onAppear {
-                    $groups.append(Group())
-                }
+            LoginView()
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
