@@ -77,17 +77,13 @@ import RealmSwift
         }
     }
 
-    func logout() {
-        isLoading = true
-        errorMessage = nil
+    static func logout() {
 
         Task {
             do {
                 try await app.currentUser?.logOut()
-                isLoading = false
             } catch {
-                isLoading = false
-                errorMessage = "logout failed: \(error.localizedDescription)"
+                print("logout failed: \(error.localizedDescription)")
             }
         }
     }

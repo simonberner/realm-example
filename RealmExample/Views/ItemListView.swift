@@ -27,6 +27,12 @@ struct ItemListView: View {
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(trailing: EditButton())
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Log out") {
+                        AuthenticationManager.logout()
+                    }
+                }
+
                 ToolbarItem(placement: .bottomBar) {
                     Button {
                         $group.items.append(Item())
