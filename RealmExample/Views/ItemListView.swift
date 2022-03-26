@@ -20,7 +20,21 @@ struct ItemListView: View {
                     ItemRowView(item: item)
                 }
                 .onMove(perform: $group.items.move)
-                .onDelete(perform: $group.items.remove)
+                // SwiftUI passes a set of indices to the closure that’s relative to the dynamic view’s underlying collection of data.
+                .onDelete(perform: { indexSet in
+
+                    // first index is the one of the to be deleted item
+                    if let index = indexSet.first {
+                        let item = group.items[index]
+                        $group.items.remove(atOffsets: indexSet)
+
+                        if let item = item.thaw(), let realm = item.realm {
+                            try? realm.write({
+                                realm.delete(item)
+                            })
+                        }
+                    }
+                })
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Items", displayMode: .large)
